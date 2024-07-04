@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spam Prediction</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      form {
+        margin: 20px auto;
+        width: 300px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      #prediction {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Spam Prediction</h1>
+
+    <form action="/spamPrediction" method="POST">
+      <label for="message">Enter your message:</label>
+      <input type="text" id="message" name="message" required />
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="prediction"></div>
+
+    <script>
+      document.getElementById("prediction").innerText =
+        "Prediction: " + prediction;
+    </script>
+  </body>
+</html>
